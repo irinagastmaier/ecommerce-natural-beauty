@@ -142,7 +142,9 @@
 
   .contact-form {
     background-color: rgba(255, 192, 203, 0.336);
-    border: 2px solid pink;
+    box-shadow: -4px -2px 15px -5px rgb(212, 160, 197);
+    -webkit-box-shadow: -4px -2px 15px -5px rgb(212, 160, 197);
+    -moz-box-shadow: -4px -2px 15px -5px rgb(212, 160, 197);
     width: 100%;
     margin: 2rem;
     padding: 2rem;
@@ -403,11 +405,7 @@
 
 //CART
 .cart-container {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: center;
   font-size: 0.7rem;
-  border: 2px solid grey;
   padding: 2rem;
   width: 60rem;
   margin: 0 auto;
@@ -417,6 +415,7 @@
     border: none;
   }
   h1 {
+    text-align: center;
     font-family: "Tenor Sans", sans-serif;
     font-weight: 600;
     font-size: 2rem;
@@ -428,17 +427,42 @@
     display: flex;
     flex-flow: row nowrap;
     justify-content: center;
-    border: 2px solid red;
     font-family: "Raleway", sans-serif;
     font-weight: 500;
     font-size: 0.8rem;
-    border: 2px solid green;
+    .remove-item {
+      font-size: 0.7rem;
+      width: 7rem;
+      margin: 0 auto;
+    }
     ul {
-      display: fle;
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: space-evenly;
+      align-items: center;
+      border: none;
+      box-shadow: -4px -2px 15px -5px rgba(201, 204, 198, 1);
+      -webkit-box-shadow: -4px -2px 15px -5px rgba(201, 204, 198, 1);
+      -moz-box-shadow: -4px -2px 15px -5px rgba(201, 204, 198, 1);
+
+      width: 35rem;
+      .price-item {
+        text-align: right;
+        font-weight: 600;
+      }
+      li {
+        width: 20em;
+        margin-right: 1rem;
+        line-height: 1.15;
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+        -ms-overflow-style: scrollbar;
+        -webkit-tap-highlight-color: rgba(96, 71, 46, 0);
+      }
     }
     img {
-      width: 10%;
-      width: 10%;
+      width: 50%;
+      width: 50%;
       margin: 1rem;
       p {
         width: 85%;
@@ -450,26 +474,28 @@
     }
   }
   .cart-container-total {
-    background-color: $light-green;
+    background-color: rgba(46, 66, 66, 0.1);
+    box-shadow: -4px -2px 15px -5px rgba(201, 204, 198, 1);
+    -webkit-box-shadow: -4px -2px 15px -5px rgba(201, 204, 198, 1);
+    -moz-box-shadow: -4px -2px 15px -5px rgba(201, 204, 198, 1);
     display: flex;
     flex-flow: row nowrap;
-   justify-content: space-between;
+    justify-content: space-between;
     width: 50%;
-    margin: 2rem auto;
+    margin: 0.5rem auto;
     text-align: center;
-    h2{
+    h2 {
       margin: 0.5rem;
       font-family: "Open Sans", sans-serif;
       font-size: 1rem;
     }
-
   }
   .total {
     margin: 0.5rem;
     width: 20em;
     font-family: "Raleway", sans-serif;
     .bold {
-      border-top: 2px solid grey;
+      border-top: 0.2px solid grey;
       font-weight: 800;
     }
   }
@@ -483,12 +509,11 @@
   }
 }
 
-
 //PAYPAL PAGE
 .paypal {
   width: 50%;
   margin: 0 auto;
-  p{
+  p {
     color: white;
     font-size: 0.1rem;
   }

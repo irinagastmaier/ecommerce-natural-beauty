@@ -24,14 +24,14 @@ export default function Cart() {
                   <img src={item.image_link} alt='product' />
                 </li>
                 <li> {item.name}</li>
-                <p
+                <p className="remove-item"
                 onDoubleClick={() =>
                   dispatch({ type: "REMOVE_CART_ITEM", payload: item })
                 }
               >
                 {element} Remove
               </p>
-                <li>
+                <li className="price-item">
                   {item.price}
                   {item.price_sign}
                 </li>
@@ -48,7 +48,7 @@ export default function Cart() {
             <li className='total-label'>Products</li>
             <li className='total-number'>{total} $</li>
             <li className='total-label'>Shipping- Stantard</li>
-            <li className='total-number'>0,0$</li>
+            <li className='total-number' style ={{color: "rgb(44, 34, 34)"}}>FREE</li>
             <li className='total-label bold'>Subtotal</li>
             <li className='total-number bold'>{total} $</li>
           </ul>
